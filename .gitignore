@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+.vscode/
+.idea/
+# Command Code's own session and settings folder: it never belongs in a submission
+.commandcode/

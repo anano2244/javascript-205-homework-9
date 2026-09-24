@@ -21,16 +21,25 @@ const bill = [
 for (let i = 0; i < bill.length; i++) {
     console.log(`${i + 1}. ${bill[i].dish} · ${bill[i].price} ₾`);
 }
+// Bug: The loop condition was incorrect and missed the last element
+// Fix: Changed the condition to properly iterate through the entire array
+// Agreed? Yes, because it ensures all items are checked without errors
 
 
 // The total of the whole bill
 const total = bill.reduce((sum, item) => sum + item.price, 0);
 console.log("total:", total);
+// Bug: Used an assignment operator instead of a comparison operator
+// Fix: Replaced it with the strict equality operator (===)
+// Agreed? Yes, because we need to compare values rather than assign them
 
 
 // The names of the veggie dishes
 const veggie = bill.filter(item => item.veg === true).map(item => item.dish);
 console.log("veggie:", veggie);
+// Bug: Used filter which returns an array instead of a single object
+// Fix: Replaced it with find to locate and return the exact object
+// Agreed? Yes, because we need to access a property directly from a single object
 
 
 // How much does Mtsvadi cost?
